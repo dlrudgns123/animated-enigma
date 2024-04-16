@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>의견 함</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 50px;
+    }
+    textarea {
+      width: 300px;
+      height: 100px;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #4169E1; /* 진한 파란색 */
+      color: #ffffff; /* 흰색 */
+      border: none;
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #6495ED; /* 밝은 파란색 */
+    }
+  </style>
+</head>
+<body>
+  <h1>의견 함</h1>
+  <textarea id="opinion" placeholder="의견을 입력하세요"></textarea>
+  <br>
+  <button onclick="submitOpinion()">의견 제출</button>
+  <script>
+    function submitOpinion() {
+      var opinion = document.getElementById("opinion").value.trim();
+      if (opinion === "") {
+        alert("의견을 입력하세요.");
+        return;
+      }
+      // 여기서는 의견을 수집하거나 저장하는 서버측 처리를 대신하여 간단히 알림창을 띄웁니다.
+      alert("의견이 제출되었습니다. 감사합니다!");
+      
+      // 제출 후 입력창 비우기
+      document.getElementById("opinion").value = "";
+    }
+  </script>
+</body>
+</html>
